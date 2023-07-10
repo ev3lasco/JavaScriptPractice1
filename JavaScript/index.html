@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="jsapp.js"></script>
+
+<h1>Buy Coffee</h1>
+  <label for="price">Price:</label>
+  <input type="number" id="price" name="price"><br><br>
+  <label for="dollars">Amount of Dollars:</label>
+  <input type="number" id="dollars" name="dollars"><br><br>
+  <button onclick="calculate()">Calculate Change</button><br><br>
+  <label for="change">Change:</label>
+  <input type="number" id="change" name="change" readonly><br><br>
+  <script>
+    function calculate() {
+      var price = document.getElementById("price").value;
+      var dollars = document.getElementById("dollars").value;
+      var change = buyCoffee(price, dollars);
+      document.getElementById("change").value = change;
+    }
+  </script>
+
+</body>
+</html>
